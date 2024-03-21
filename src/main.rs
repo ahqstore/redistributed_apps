@@ -43,5 +43,5 @@ Redistributed by AHQ Store (ahqsecret@gmail.com)"#),
         version: "latest".into()
     };
 
-    std::fs::write("./firefox.json", to_string(&app).unwrap()).unwrap();
+    std::fs::write("./firefox.json", to_string(to_string(&app).unwrap().as_bytes()).unwrap()).unwrap();
 }
