@@ -1,0 +1,36 @@
+name: Update VLC if needed
+
+on:
+  schedule:
+    - cron: 0 * * * *
+  push:
+
+permissions: write-all
+
+jobs:
+  publish:
+    name: Publish new version if needed
+
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+
+      - name: Install deps
+        uses: npm i -g pnpm; pnpm install
+
+      - name: Run VLC
+        run: node js/vlc.js
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: Push to GitHub
+        uses: EndBug/add-and-commit@v9
+        with:
+          committer_name: AHQ Store Bot
+          committer_email: ahqstore@github.io
+          message: Refresh Entries
