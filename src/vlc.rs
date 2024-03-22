@@ -28,7 +28,7 @@ pub fn main() {
 
         let app: AHQStoreApplication = AHQStoreApplication {
           appId: "nmCvSrMD3BMR9E2V0Opl6edlfU6Q3S6".into(),
-          appDisplayName: "Firefox Web Browser".into(),
+          appDisplayName: "VLC Media Player".into(),
           appShortcutName: "".into(),
           authorId: "1".into(),
           description: r#"VLC media player is a free, open-source, cross-platform multimedia player that can play most media files, including DVDs, audio CDs, and VCDs. It can also play most formats without conversion and supports advanced subtitles, multi-track audio, and playback speed control. VLC also allows users to synchronize files with Dropbox, GDrive, OneDrive, and other services.
