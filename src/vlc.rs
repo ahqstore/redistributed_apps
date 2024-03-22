@@ -72,7 +72,7 @@ version: val.clone()
 
         Command::new("node")
           .args(["./js/vlc.js"])
-          .env("GH_TOKEN", env!("GH_TOKEN"))
+          .env("GH_TOKEN", std::env::var("GH_TOKEN").unwrap())
           .spawn()
           .unwrap()
           .wait()
