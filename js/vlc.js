@@ -80,7 +80,7 @@ Redistributed by AHQ Store (ahqsecret@gmail.com)`,
     const release = await client.rest.repos.createRelease({
       owner: "ahqstore",
       repo: "redistributed_apps",
-      tag_name: `vlc_${vlc}`,
+      tag_name: `vlc_${Date.now()}`,
       name: "VLC new version",
     });
     const {
