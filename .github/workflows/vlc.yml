@@ -11,7 +11,7 @@ jobs:
   publish:
     name: Publish new version if needed
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -20,11 +20,14 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4
 
+      - name: Install rust
+        run: rustup install stable
+
       - name: Install deps
         run: npm i -g pnpm; pnpm install
 
       - name: Run VLC
-        run: node js/vlc.js
+        run: cargo run --features vlc
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
 

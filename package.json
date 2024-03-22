@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "octokit": "^3.1.2",
-    "puppeteer": "^22.6.0"
+    "octokit": "^3.1.2"
   }
 }
