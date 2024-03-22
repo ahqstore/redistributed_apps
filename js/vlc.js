@@ -49,7 +49,7 @@ const puppeteer = require("puppeteer");
       description: "VLC media player is a free, open-source, cross-platform multimedia player that can play most media files, including DVDs, audio CDs, and VCDs. It can also play most formats without conversion and supports advanced subtitles, multi-track audio, and playback speed control. VLC also allows users to synchronize files with Dropbox, GDrive, OneDrive, and other services.\nRedistributed by AHQ Store (ahqsecret@gmail.com)",
       displayImages: [],
       downloadUrls: {
-        1: {
+        "1": {
           installerType: "WindowsInstallerMsi",
           url: "${vlc}"
         }
