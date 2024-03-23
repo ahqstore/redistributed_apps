@@ -12,7 +12,7 @@ pub fn main() {
 
   let tab = browser.new_tab().unwrap();
   tab
-    .navigate_to("https://get.videolan.org/vlc/last/win64/")
+    .navigate_to("https://mirror.kku.ac.th/videolan/vlc/last/win64/")
     .unwrap();
 
   let value = fs::read_to_string("./vlc").unwrap();
@@ -41,7 +41,7 @@ downloadUrls: {
 
   map.insert(1, DownloadUrl {
     installerType: InstallerFormat::WindowsInstallerMsi,
-    url: val.clone()
+    url: format!("https://mirror.kku.ac.th/videolan/vlc/last/win64/{}", &val)
   });
   map
 },
